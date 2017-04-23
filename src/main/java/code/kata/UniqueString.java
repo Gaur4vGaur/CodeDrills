@@ -6,8 +6,8 @@ package code.kata;
 
 public class UniqueString {
 
-    public static void main(String[] args) {
-        System.out.println(containsUniqueCharacters(args[0].toCharArray()));
+    public static boolean isUniqueCharacterString(String string) {
+        return containsUniqueCharacters(string.toCharArray());
     }
 
     private static boolean containsUniqueCharacters(char[] input) {
