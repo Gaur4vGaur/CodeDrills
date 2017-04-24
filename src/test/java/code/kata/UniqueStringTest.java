@@ -6,7 +6,7 @@ import static org.junit.Assert.assertFalse;
 
 public class UniqueStringTest {
 
-    //@Test
+    @Test
     public void testUniqueString() {
         assertTrue("String has all unqiue character " + "abcdefgh",UniqueString.isUniqueCharacterString("abcdefgh"));
         assertFalse("String does not have all unqiue characters", UniqueString.isUniqueCharacterString("abcdefgha"));
