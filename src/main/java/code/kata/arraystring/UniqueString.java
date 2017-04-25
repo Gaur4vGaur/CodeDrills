@@ -1,8 +1,10 @@
-package code.kata;
+package code.kata.arraystring;
 
 /**
- * Find is string has all unique characters.
- */
+ * Implement an algorithm to determine if a string has all unique characters.
+ *
+ * @author: Gaurav Gaur
+ **/
 
 public class UniqueString {
 

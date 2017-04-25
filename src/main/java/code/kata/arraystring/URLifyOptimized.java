@@ -1,4 +1,10 @@
-package code.kata;
+package code.kata.arraystring;
+
+/**
+ * Write a method to replace all spaces in a string with '%20'.
+ *
+ * @author: Gaurav Gaur
+ **/
 
 public class URLifyOptimized {
     

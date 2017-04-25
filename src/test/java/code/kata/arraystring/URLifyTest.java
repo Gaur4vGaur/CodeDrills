@@ -1,4 +1,4 @@
-package code.kata;
+package code.kata.arraystring;
 
 import org.junit.Test;
 import static org.junit.Assert.assertEquals;

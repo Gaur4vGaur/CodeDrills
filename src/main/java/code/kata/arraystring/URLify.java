@@ -1,7 +1,10 @@
-package code.kata;
+package code.kata.arraystring;
 
-import static code.kata.Printer.plns;
-import static code.kata.Printer.pln;
+/**
+ * Write a method to replace all spaces in a string with '%20'.
+ *
+ * @author: Gaurav Gaur
+ **/
 
 public class URLify {
 

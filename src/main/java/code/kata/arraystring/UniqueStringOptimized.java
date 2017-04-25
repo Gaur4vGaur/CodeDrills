@@ -1,4 +1,4 @@
-package code.kata;
+package code.kata.arraystring;
 
 public class UniqueStringOptimized {
 
