@@ -1,5 +1,11 @@
 package code.kata.arraystring;
 
+/**
+ * Implement an algorithm to determine if a string has all unique characters.
+ *
+ * @author: Gaurav Gaur
+ **/ 
+
 public class UniqueStringOptimized {
 
     public static boolean isUniqueCharacterString(String string) {
@@ -18,10 +24,5 @@ public class UniqueStringOptimized {
         }
 
         return true;
-    }
-
-    public static <T> void println(T input) {
-        System.out.println("\n\n\n"+input);
-    }
-    
+    }    
 }
