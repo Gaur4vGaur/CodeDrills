@@ -1,7 +1,5 @@
 package code.kata.arraystring;
 
-import static code.kata.util.Printer.pln;
-
 /**
  * There are three types of edits : insert, remove, or replace a character. 
  * Given two strings, the class will check if they are one edit (or zero edits) away.
@@ -44,8 +42,6 @@ public class OneAway {
                 }
             }
         }
-
-
 
         return length == 1;
     }
