@@ -4,6 +4,7 @@ package code.kata.arraystring;
  * Given a string, write a function to check if it is a permutation of a palin­drome
  *
  * @author: Gaurav Gaur
+ *
  **/
 
  public class PermutationPalindrome {
