@@ -30,6 +30,7 @@ public class OneAwayTest {
     public void testOneUpdateAway() {
         assertTrue(OneAway.isOneAway("abcc", "abcd"));
         assertTrue(OneAway.isOneAway("abcd", "aacd"));
+        assertFalse(OneAway.isOneAway("abcd", "aaed"));
     }
 
     @Test
