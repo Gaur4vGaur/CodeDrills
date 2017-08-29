@@ -2,6 +2,8 @@ package code.kata.linkedlist;
 
 import java.util.List;
 import java.util.LinkedList;
+import java.util.Set;
+import java.util.HashSet;
 import static code.kata.util.Printer.pln;
 
 /**
@@ -13,7 +15,22 @@ import static code.kata.util.Printer.pln;
 
 public class DuplicateRemover {
 
-    public static <T> void removeDuplicates(List<T> input) {
+    
+    public static <T> List<T> removeDuplicates(List<T> input) {
+        //return solutionUsingExtraBooleanArray(input);
+        return solutionUsingHashSet(input);
+    }
+
+    private static <T> List<T> solutionUsingHashSet(List<T> input) {
+        Set<T> result = new HashSet<>();
+        input.forEach(element -> result.add(element));
+
+        return new LinkedList(result);
+    }
+
+    // remove duplicate solution 1. This is a bad solution as it is O(n^2)
+    // and it uses addtional space
+    private static <T> List<T> solutionUsingExtraBooleanArray(List<T> input) {
         boolean[] array = new boolean[input.size()];
 
         for(int i=0; i<input.size(); i++) {
@@ -28,5 +45,6 @@ public class DuplicateRemover {
             if(array[i])
                 input.remove(i);
 
+        return input;
     }
 }
