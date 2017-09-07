@@ -21,25 +21,51 @@ public class FindElementFromLastTest {
     }
 
     @Test
-    public void testFetchingThirdElement() {
+    public void testFetchingThirdElementFromLast() {
         int position = 3;
         list = addElements(1,2,3,4,5,6,7);
 
-        Integer result = FindElementFromLast.findElement(list, position);
+        int result = FindElementFromLast.findElement(list, position);
         assertEquals("the element does not match", result, 5);
     }
 
+    @Test
+    public void testFetchingFirstElementElement() {
+        int position = 7;
+        list = addElements(1,2,3,4,5,6,7);
+
+        int result = FindElementFromLast.findElement(list, position);
+        assertEquals("the element does not match", result, 1);
+    }
+
+    @Test
+    public void testFetchingLastElementElement() {
+        int position = 1;
+        list = addElements(1,2,3,4,5,6,7);
+
+        int result = FindElementFromLast.findElement(list, position);
+        assertEquals("the element does not match", result, 7);
+    }
+
+
     @Test(expected = IndexOutOfBoundsException.class)
-    public void testFetchingZeroElement() {
+    public void testFetchingZeroIndex() {
         list = addElements(1,2,3,4,5,6,7);
 		int position = 0;
         Integer result = FindElementFromLast.findElement(list, position);
     }
 
     @Test(expected = IndexOutOfBoundsException.class)
-    public void testFetchingNegativeElement() {
+    public void testFetchingNegativeIndex() {
         list = addElements(1,2,3,4,5,6,7);
 		int position = -1;
+        Integer result = FindElementFromLast.findElement(list, position);
+    }
+
+    @Test(expected = IndexOutOfBoundsException.class)
+    public void testFetchTooLargeIndex() {
+        list = addElements(1,2,3,4,5,6,7);
+		int position = 10;
         Integer result = FindElementFromLast.findElement(list, position);
     }
 

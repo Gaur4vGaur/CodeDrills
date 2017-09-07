@@ -9,6 +9,6 @@ import static code.kata.util.Printer.pln;
 public class FindElementFromLast {
 	
 	public static <T> T findElement(List<T> list, int position) {
-		return 0;
+		return list.get(list.size() - position);
 	}
 }
