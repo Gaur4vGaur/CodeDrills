@@ -49,9 +49,8 @@ class IsUnique {
     public static boolean isUnique(String string) {
         boolean[] index = new boolean[256];
         for(char c: string.toCharArray()) {
-            int i = c - 'A';
-            if(index[i]) return false;
-                else index[i] = true;
+            if(index[c]) return false;
+                else index[c] = true;
         }
 
         return true;
