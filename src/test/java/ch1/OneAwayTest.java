@@ -17,11 +17,6 @@ public class OneAwayTest {
     }
 
     @Test
-    public void oneDeletionAway3() {
-        assertTrue("pales is one deletion away from plvs", OneAway.oneAway("pale", "plvs"));
-    }
-
-    @Test
     public void oneUpdateAway() {
         assertTrue("pale is one deletion away from bale", OneAway.oneAway("pale", "bale"));
     }
@@ -51,17 +46,16 @@ class OneAway {
         char[] c1 = s1.toCharArray();
         char[] c2 = s2.toCharArray();
 
-        if(s1.length()-s2.length() > 1)
+        if(c1.length-c2.length > 1)
             return false;
 
-        for(int i=0; i<s2.length(); i++) {
-            if((i+counter) < s2.length(); c2[i] != c1[i+counter]) {
-                if(c2[i] == c1[i+counter+1]) {
+        for(int i = 0; i < s2.length(); i++) {
+            if(!(c1[i] == c2[i])) {
+                if(!((i+1) < s1.length() && counter == 0 && (c1[i+1] == c2[i])))
                     counter++;
-                }
             }
         }
-
+        
         return counter < 2;
     }
     
