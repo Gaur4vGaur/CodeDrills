@@ -16,15 +16,19 @@ public class TreePrinter {
 		
 		printNodes(bt.root, 0);
 		
-		for(LinkedList<Integer> ll: nodeTracker)
+		for(LinkedList<Integer> ll: nodeTracker) {
 			for(Integer key: ll)
-				System.out.println(key);
+				System.out.print(key);
+				
+	 		System.out.println();
+		}
+			
 	}
 	
 	private static void printNodes(Node node, int level) {
 		if(node == null) return;
 	
-		if(nodeTracker.get(level) == null) {
+		if(nodeTracker == null || nodeTracker.size() <= level || nodeTracker.get(level) == null) {
 			LinkedList<Integer> ll = new LinkedList<>();
 			ll.add(node.key);
 			nodeTracker.add(level, ll);
