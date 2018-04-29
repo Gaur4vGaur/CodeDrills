@@ -13,6 +13,7 @@ class Node {
 public class BinaryTree {
 
     Node root;
+    
     public BinaryTree(int key) {
         root = new Node(key);
     }
@@ -35,5 +36,21 @@ public class BinaryTree {
         rt.right = r1;
         
         this.root = rt;
+    }
+
+    public Node leftMostNode(Node node) {
+        if(node.left != null) {
+            return leftMostNode(node.left);
+        } else {
+            return node;
+        }
+    }
+
+    public Node rightMostNode(Node node) {
+        if(node.right != null) {
+            return rightMostNode(node.right);
+        } else {
+            return node;
+        }
     }
 }
