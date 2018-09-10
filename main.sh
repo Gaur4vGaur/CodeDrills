@@ -7,6 +7,8 @@ if [ $1 == "" ]
        exit 1
 fi
 
-mvn clean compile install
+mvn compile install
 mvn exec:java -Dexec.mainClass=$1
+
+read -n1 -r -p "Press any key to continue..." key
 
